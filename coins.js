@@ -12,12 +12,14 @@
 
 */
 
-//first we need an empty purse
+//first step is to define the value of quarter, dime, nickel, and penny
 
 var quarters = 25
 var dimes = 10
 var nickels = 5
 var pennies = 1
+
+//next we need an empty purse where the values will be stored
 
 var coinPurse = {
   quarters: 0,
@@ -26,6 +28,7 @@ var coinPurse = {
   pennies: 0
 }
 
+//now we need to create a function that will take our input amount and determine how many coins of each type
 
 function coinCounter (inputAmount) {
 var convertToCents = inputAmount * 100;
@@ -52,30 +55,9 @@ console.log(pennyCount);
 coinPurse.penny = pennyCount;
 }
 
-coinCounter(1.99);  
+coinCounter(1.99);  //here we are calling the function we just wrote and using an input amount to test the function
  
 
-// function getNumberOfQuarters (inputAmount) {
-
-// }
-
-// function getNumberOfQuarters (inputAmount) {
-//   inputAmount / quarters;
-//   var 
-//   math.floor(inputAmount);
-// }
-
-// function getNumberOfDimes (inputAmount) {
-//   inputAmount / dimes = inputAmount;
-// }
-
-// function getNumberOfNickels (inputAmount) {
-//   inputAmount / nickels = inputAmount;
-// }
-
-// function getNumberOfPennies (inputAmount) {
-//   inputAmount / pennies = inputAmount;
-// }
 
 //
 
