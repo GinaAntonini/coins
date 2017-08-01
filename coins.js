@@ -5,7 +5,7 @@ var dimes = 10;
 var nickels = 5;
 var pennies = 1;
 
-//next we need an empty purse where the values will be stored
+//next we need an empty purse object where the values will be stored
 
 var coinPurse = {
   quarters: 0,
@@ -14,12 +14,12 @@ var coinPurse = {
   pennies: 0
 }
 
-//now we need to create a function that will take our input amount and determine how many coins of each type
+//now we need to create a function that will take our input amount and determine how many coins of each type: beginning with calculating how many quarters, subtracting that value from the input amount, then moving on to dime count, then nickel count, then penny count. 
 
 function coinCounter (inputAmount) {
-var convertToCents = inputAmount * 100;
-var quarterCount = Math.floor(convertToCents / quarters); //takes the input amount, divides by .25, then rounds down to nearest integer, giving number of quarters
-convertToCents -= quarterCount * quarters; //takes the answer for inputAmount and multiply by quarter value, giving you the amount left over after
+var convertToCents = inputAmount * 100; //the input amount is placed in a variable convertToCents. We're converting to cents since we are dealing with dollar and cents. 
+var quarterCount = Math.floor(convertToCents / quarters); //takes the input amount, divides by 25, rounds down to nearest integer
+convertToCents -= quarterCount * quarters; //takes the quarter count and multiplies by quarter value, giving you the amount left over to send down to the dime count
 coinPurse.quarters = quarterCount;
 
 
